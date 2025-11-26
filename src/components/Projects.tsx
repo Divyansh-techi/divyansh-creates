@@ -1,4 +1,4 @@
-import { Github, ExternalLink, Mic, Search } from "lucide-react";
+import { Github, ExternalLink, Mic, Search, BarChart3, Youtube } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const projects = [
@@ -30,6 +30,20 @@ const projects = [
       "User-friendly interface",
     ],
   },
+  {
+    title: "Data Science Assignment",
+    tagline: "Data analysis & visualization tutorials",
+    description:
+      "A comprehensive collection of data science assignments covering data analysis, visualization, and machine learning concepts. Video tutorials available on YouTube.",
+    tech: ["Python", "Data Science", "Machine Learning", "Visualization"],
+    icon: BarChart3,
+    youtube: "https://www.youtube.com/@divyansharekar753/playlists",
+    highlights: [
+      "Step-by-step video tutorials",
+      "Data analysis techniques",
+      "Practical ML implementations",
+    ],
+  },
 ];
 
 const Projects = () => {
@@ -54,15 +68,28 @@ const Projects = () => {
                 <project.icon className="text-primary" size={24} />
               </div>
               <div className="flex gap-2">
-                <a
-                  href={project.github}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="p-2 rounded-lg bg-muted hover:bg-muted/80 text-muted-foreground hover:text-foreground transition-colors"
-                  aria-label="View on GitHub"
-                >
-                  <Github size={18} />
-                </a>
+                {project.github && (
+                  <a
+                    href={project.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="p-2 rounded-lg bg-muted hover:bg-muted/80 text-muted-foreground hover:text-foreground transition-colors"
+                    aria-label="View on GitHub"
+                  >
+                    <Github size={18} />
+                  </a>
+                )}
+                {project.youtube && (
+                  <a
+                    href={project.youtube}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="p-2 rounded-lg bg-muted hover:bg-muted/80 text-muted-foreground hover:text-red-500 transition-colors"
+                    aria-label="View on YouTube"
+                  >
+                    <Youtube size={18} />
+                  </a>
+                )}
               </div>
             </div>
 
