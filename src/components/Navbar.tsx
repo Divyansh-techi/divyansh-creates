@@ -24,7 +24,7 @@ const Navbar = () => {
             <span className="text-primary">✦</span>
           </a>
 
-          {/* Email - Desktop */}
+         
           <a 
             href="mailto:divyansharekar28@gmail.com" 
             className="hidden md:block text-sm text-muted-foreground hover:text-foreground transition-colors"
