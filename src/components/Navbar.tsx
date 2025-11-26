@@ -24,14 +24,6 @@ const Navbar = () => {
             <span className="text-primary">✦</span>
           </a>
 
-         
-          <a 
-            href="mailto:divyansharekar28@gmail.com" 
-            className="hidden md:block text-sm text-muted-foreground hover:text-foreground transition-colors"
-          >
-            divyansharekar28@gmail.com
-          </a>
-
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center gap-8">
             {navLinks.map((link) => (
